@@ -1,0 +1,44 @@
+[data-theme="light"] {
+    --bg-color: #fff;
+    --text-color: #333;
+    --heading-color: #444;
+    --button-color: black;
+}
+
+[data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #fff;
+    --heading-color: #ddd; 
+    --button-color: white;
+}
+
+.bg-white{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header, section, footer{
+    color: var(--heading-color);
+    background-color: var(--bg-color);
+}
+
+button{
+    color: var(--button-color);
+}
+
+h2, .mx-auto, option{
+    color: black;
+}
+
+footer{
+    border-top: 0.1px solid var(--text-color);
+}
+
+input, :placeholder-shown, select{
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+img [src= 'https://static.vecteezy.com/system/resources/previews/016/622/428/original/valuation-icon-design-free-vector.jpg']{
+    height: 100px;
+}
