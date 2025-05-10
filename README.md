@@ -17,34 +17,34 @@ SoftSell is a responsive, modern web application that allows users to **resell u
 
 ## 🗂️ Folder Structure
 
-SOFTSELL-APP/
-├── public/
-│ └── logo.png
-├── src/
-│ ├── App.css
-│ ├── App.jsx
-│ └── index.css
-│ ├── main.jsx
-│ └── theme-context.jsx
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package-lock.json
-├── package.json
-├── README.md
-├── tailwind.config.js
-└── vite.config.js
+SOFTSELL-APP/ <br>
+├── public/ <br>
+│ └── logo.png <br>
+├── src/ <br>
+│ ├── App.css <br>
+│ ├── App.jsx <br>
+│ └── index.css <br>
+│ ├── main.jsx <br>
+│ └── theme-context.jsx <br>
+├── .gitignore <br>
+├── eslint.config.js <br>
+├── index.html <br>
+├── package-lock.json <br>
+├── package.json <br>
+├── README.md <br>
+├── tailwind.config.js <br>
+└── vite.config.js <br>
 
 ## 🧰 Tech Stack
-├──--------------------------------------------------------------------------------|
-│| Technology                                     | Purpose                        |
-|-------------------------------------------------|--------------------------------|
-| [React](https://reactjs.org)                    | UI library                     |
-| [Tailwind CSS](https://tailwindcss.com)         | Utility-first styling          |
-| [Vite](https://vitejs.dev)                      | Fast dev server and build tool |
-| [Framer Motion](https://www.framer.com/motion/) | Animations                     |
-| Context API                                     | Theme toggle                   |
-└──--------------------------------------------------------------------------------|
+├──--------------------------------------------------------------------------------| <br>
+│  Technology                                     | Purpose                        | <br>
+|-------------------------------------------------|--------------------------------| <br>
+| [React](https://reactjs.org)                    | UI library                     | <br>
+| [Tailwind CSS](https://tailwindcss.com)         | Utility-first styling          | <br>
+| [Vite](https://vitejs.dev)                      | Fast dev server and build tool | <br>
+| [Framer Motion](https://www.framer.com/motion/) | Animations                     | <br>
+| Context API                                     | Theme toggle                   | <br>
+└──--------------------------------------------------------------------------------| <br>
 
 
 ## 🛠️ Getting Started
@@ -58,21 +58,21 @@ Make sure you have the following installed:
 
 ---
 
-### 🔧 Setup Instructions
+## 🔧 Setup Instructions
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/your-username/SPFTSELL-APP.git
 cd SOFTSELL-APP
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Run development server
+### Run development server
 npm run dev
 Open http://localhost:5173 in your browser to view the app.
 
-🚀 Build & Deployment
-# To build the project for production:
+## 🚀 Build & Deployment
+### To build the project for production:
 
 npm run build
 Then deploy the contents of the dist/ folder using platforms like:
@@ -83,7 +83,7 @@ Netlify
 
 GitHub Pages (with static deployment setup)
 
-✏️ Customization
+## ✏️ Customization
 You can modify:
 
 Text and section content → in App.jsx
@@ -92,14 +92,14 @@ Logo and icons → in /public/ folder or via image links
 
 Form submission logic → update handleSubmit function in App.jsx
 
-📬 Contact
+## 📬 Contact
 This project was developed by Kokala Sai Teja.
 For suggestions or contributions, feel free to open an issue or pull request.
 
 📧 kokalasaiteja@gmail.com
 🌐 LinkedIn
 
-🤝 Contributing
+## 🤝 Contributing
 Fork the repository
 
 Create a new branch (git checkout -b feature-branch)
@@ -110,7 +110,7 @@ Commit and push (git commit -m "Add feature" → git push origin feature-branch)
 
 Open a pull request
 
-📄 License
+## 📄 License
 This project is open-source and free to use under the MIT License.
 
 © 2025 SoftSell. All rights reserved.
