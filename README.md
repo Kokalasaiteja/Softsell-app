@@ -114,3 +114,9 @@ Open a pull request
 This project is open-source and free to use under the MIT License.
 
 © 2025 SoftSell. All rights reserved.
+
+## Screenshots
+### DarkMode
+![image](https://github.com/user-attachments/assets/5e3b81c1-865e-4bf7-bd05-b52c892dcf10)
+### Light mode
+![image](https://github.com/user-attachments/assets/c8387651-5482-461f-b68b-1ebf76150f1c)
