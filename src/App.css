@@ -26,15 +26,17 @@ button{
     color: var(--button-color);
 }
 
-h2, .mx-auto, option{
+h2, .mx-auto, option, .mb-2{
     color: black;
 }
+
+.font-semibold{color: white;}
 
 footer{
     border-top: 0.1px solid var(--text-color);
 }
 
-input, :placeholder-shown, select{
+input, :placeholder-shown, select, textarea{
     border: 2px solid var(--text-color);
     color: var(--text-color);
 }

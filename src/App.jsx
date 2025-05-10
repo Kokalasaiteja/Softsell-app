@@ -1,13 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
-import { ThemeProvider, useTheme } from './theme-context';
+import { useTheme } from './theme-context';
+import { GoogleGenAI } from "@google/genai";
 
- 
+const ai = new GoogleGenAI({ apiKey: "AIzaSyAfx1btejKtGHduf0ObU8TOiwIsXS2MXHw" }); 
+
 function App() {
+  const { theme, toggleTheme } = useTheme();
   const [form, setForm] = useState({ name: '', email: '', company: '', license: '', message: '' });
   const [showChat, setShowChat] = useState(false);
-  const {theme, toggleTheme} = useTheme();
+  const [chatInput, setChatInput] = useState('');
+  const [chatMessages, setChatMessages] = useState([
+    { sender: 'bot', text: 'Welcome! Ask me anything about selling your license.' }
+  ]);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -18,8 +25,40 @@ function App() {
     alert('Form submitted succesfully');
   };
 
+  const handleChatInputChange = (e) => {
+    setChatInput(e.target.value);
+  };
+
+  const sendMessage = async () => {
+    if (!chatInput.trim()) return;
+    const userMessage = { sender: 'user', text: chatInput.trim() };
+    setChatMessages((prev) => [...prev, userMessage]);
+    setChatInput('');
+    setLoading(true);
+
+    try {
+      const response = await ai.models.generateContent({
+        model: "gemini-2.0-flash",
+        contents: userMessage.text,
+      });
+      const botMessage = { sender: 'bot', text: response.text || 'Sorry, no response from the API.' };
+      setChatMessages((prev) => [...prev, botMessage]);
+    } catch (error) {
+      const errorMessage = { sender: 'bot', text: 'Error contacting API. Please try again later.' };
+      setChatMessages((prev) => [...prev, errorMessage]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
+
   return (
-    <ThemeProvider>
     <div className={`${theme === 'dark' ? 'dark' : ''}`}>
       <div className="min-h-screen font-sans transition-colors bg-white dark:bg-black text-gray-900 dark:text-white">
 
@@ -32,7 +71,8 @@ function App() {
           <button
             onClick={toggleTheme}
             className="bg-gray-100 dark:bg-gray-700 p-2 rounded-full hover:ring-2 ring-blue-400 transition"
-            aria-label="Toggle dark mode">
+            aria-label="Toggle dark mode"
+          >
             {theme === 'dark' ? '🌙' : '🌞'}
           </button>
         </header>
@@ -145,32 +185,50 @@ function App() {
           </form>
         </section>
 
-        {/* Footer */}
-        <footer className="text-center p-4 bg-gray-200 dark:bg-gray-700">
-          <p>&copy; 2025 SoftSell. All rights reserved.</p>
-        </footer>
-
-        {/* Optional Mock Chat Widget */}
-        <div className="fixed bottom-4 right-4 z-50">
-          <button onClick={() => setShowChat(!showChat)} className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg">
-            💬
+        {/* Mock Chat Widget */}
+        <div className="fixed bottom-4 right-4 z-50 w-72">
+          <button
+            onClick={() => setShowChat(!showChat)}
+            className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg w-full"
+          >
+            💬 Chat
           </button>
           {showChat && (
-            <div className="bg-white dark:bg-gray-800 text-sm p-4 w-64 mt-2 rounded shadow-xl">
-              <p className="font-semibold">AI Assistant</p>
-              <p className="mt-2">Q: How do I sell my license?</p>
-              <p>A: Upload your license and we’ll handle the rest!</p>
-              <p className="mt-2">Q: How long does the valuation process take?</p>
-              <p>A: The valuation process typically takes 1-3 business days.</p>
-              <p className="mt-2">Q: Is my data secure during the resale?</p>
-              <p>A: Yes, we use industry-standard encryption to protect your data.</p>
-              <p className="mt-2">If you have more questions our chatbot is in developing mode so wait for some time.</p>
+            <div className="bg-white dark:bg-gray-800 text-sm p-4 mt-2 rounded shadow-xl flex flex-col h-96">
+              <p className="font-semibold mb-2">AI Assistant</p>
+              <div className="flex-1 overflow-y-auto mb-2">
+                {chatMessages.map((msg, index) => (
+                  <div
+                    key={index}
+                    className={`mb-2 p-2 rounded ${
+                      msg.sender === 'user' ? 'bg-blue-100 text-right' : 'bg-gray-200 dark:bg-gray-700 text-left'
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                ))}
+                {loading && <p>Loading...</p>}
+              </div>
+              <textarea
+                value={chatInput}
+                onChange={handleChatInputChange}
+                onKeyDown={handleKeyDown}
+                placeholder="Type your message..."
+                className="w-full p-2 border rounded dark:bg-gray-700 dark:text-white resize-none"
+                rows={2}
+              />
+              <button
+                onClick={sendMessage}
+                disabled={loading}
+                className="mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded disabled:opacity-50"
+              >
+                Send
+              </button>
             </div>
           )}
         </div>
       </div>
     </div>
-    </ThemeProvider>
   );
 }
 
