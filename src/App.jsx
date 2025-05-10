@@ -122,7 +122,7 @@ function App() {
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.05 }}
-                className="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-700">
+                className="p-6 border rounded-lg shadow-sm bg-black dark:bg-gray-800">
                 <img src={
                           i === 0
                           ? 'https://img.freepik.com/premium-vector/secure-ssl-encryption-logo-secure-connection-icon-vector-illustration-ssl-certificate-icon_526569-863.jpg'
@@ -157,7 +157,7 @@ function App() {
                 company: "InnovateX"
               }
             ].map((t, i) => (
-              <div key={i} className="p-6 border rounded shadow-md bg-white dark:bg-gray-800">
+              <div key={i} className="p-6 border rounded shadow-md bg-blue-400 dark:bg-gray-800 text-amber-50">
                 <p className="italic">"{t.quote}"</p>
                 <p className="mt-4 font-semibold">– {t.name}, {t.role} at {t.company}</p>
               </div>
@@ -191,7 +191,7 @@ function App() {
             onClick={() => setShowChat(!showChat)}
             className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg w-full"
           >
-            💬 Chat
+            💬 Customer Support
           </button>
           {showChat && (
             <div className="bg-white dark:bg-gray-800 text-sm p-4 mt-2 rounded shadow-xl flex flex-col h-96">
