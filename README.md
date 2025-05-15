@@ -115,6 +115,8 @@ This project is open-source and free to use under the MIT License.
 
 © 2025 SoftSell. All rights reserved.
 
+## Live Priview 
+At https://codesandbox.io/p/sandbox/github/Kokalasaiteja/Softsell-app
 ## Screenshots
 ### DarkMode
 ![image](https://github.com/user-attachments/assets/5e3b81c1-865e-4bf7-bd05-b52c892dcf10)
