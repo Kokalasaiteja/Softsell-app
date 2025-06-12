@@ -117,6 +117,9 @@ This project is open-source and free to use under the MIT License.
 
 ## Live Priview 
 At https://codesandbox.io/p/sandbox/github/Kokalasaiteja/Softsell-app
+
+Or
+https://rgz6rx-5173.csb.app/
 ## Screenshots
 ### DarkMode
 ![image](https://github.com/user-attachments/assets/5e3b81c1-865e-4bf7-bd05-b52c892dcf10)
