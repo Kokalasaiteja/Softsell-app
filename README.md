@@ -4,6 +4,14 @@ SoftSell is a responsive, modern web application that allows users to **resell u
 
 ---
 
+## 😃 Live Preview
+
+At  <br> <br>
+https://codesandbox.io/p/sandbox/github/Kokalasaiteja/Softsell-app or <br> <br>
+https://rgz6rx-5173.csb.app/
+
+---
+
 ## ✨ Features
 
 - 🎯 One-page responsive UI (Hero, Process, Features, Testimonials, Contact)
@@ -23,7 +31,7 @@ SOFTSELL-APP/ <br>
 ├── src/ <br>
 │ ├── App.css <br>
 │ ├── App.jsx <br>
-│ └── index.css <br>
+│ ├── index.css <br>
 │ ├── main.jsx <br>
 │ └── theme-context.jsx <br>
 ├── .gitignore <br>
@@ -36,15 +44,14 @@ SOFTSELL-APP/ <br>
 └── vite.config.js <br>
 
 ## 🧰 Tech Stack
-├──--------------------------------------------------------------------------------| <br>
-│  Technology                                     | Purpose                        | <br>
-|-------------------------------------------------|--------------------------------| <br>
-| [React](https://reactjs.org)                    | UI library                     | <br>
-| [Tailwind CSS](https://tailwindcss.com)         | Utility-first styling          | <br>
-| [Vite](https://vitejs.dev)                      | Fast dev server and build tool | <br>
-| [Framer Motion](https://www.framer.com/motion/) | Animations                     | <br>
-| Context API                                     | Theme toggle                   | <br>
-└──--------------------------------------------------------------------------------| <br>
+| Technology                                                                                 | Purpose                          |
+|--------------------------------------------------------------------------------------------|----------------------------------|
+| [React](https://reactjs.org)                                                               | UI library                       |
+| [Tailwind CSS](https://tailwindcss.com)                                                    | Utility-first styling            |
+| [Vite](https://vitejs.dev)                                                                 | Fast dev server and build tool   |
+| [Framer Motion](https://www.framer.com/motion/)                                            | Animations                       |
+| [Context API](https://www.freecodecamp.org/news/react-context-api-explained-with-examples/)| Theme toggle                     |
+
 
 
 ## 🛠️ Getting Started
@@ -61,8 +68,8 @@ Make sure you have the following installed:
 ## 🔧 Setup Instructions
 
 ### Clone the repository
-git clone https://github.com/your-username/SPFTSELL-APP.git
-cd SOFTSELL-APP
+git clone https://github.com/your-username/Softsell-app.git
+cd Softsell-app
 
 ### Install dependencies
 npm install
@@ -86,11 +93,11 @@ GitHub Pages (with static deployment setup)
 ## ✏️ Customization
 You can modify:
 
-Text and section content → in App.jsx
+- Text and section content → in App.jsx
 
-Logo and icons → in /public/ folder or via image links
+- Logo and icons → in /public/ folder or via image links
 
-Form submission logic → update handleSubmit function in App.jsx
+- Form submission logic → update handleSubmit function in App.jsx
 
 ## 📬 Contact
 This project was developed by Kokala Sai Teja.
@@ -102,26 +109,21 @@ For suggestions or contributions, feel free to open an issue or pull request.
 ## 🤝 Contributing
 Fork the repository
 
-Create a new branch (git checkout -b feature-branch)
+- Create a new branch (git checkout -b feature-branch)
 
-Make your changes
+- Make your changes
 
-Commit and push (git commit -m "Add feature" → git push origin feature-branch)
+- Commit and push (git commit -m "Add feature" → git push origin feature-branch)
 
-Open a pull request
+- Open a pull request
 
 ## 📄 License
 This project is open-source and free to use under the MIT License.
 
 © 2025 SoftSell. All rights reserved.
 
-## Live Priview 
-At https://codesandbox.io/p/sandbox/github/Kokalasaiteja/Softsell-app
-
-Or
-https://rgz6rx-5173.csb.app/
 ## Screenshots
-### DarkMode
+### 🌝 DarkMode
 ![image](https://github.com/user-attachments/assets/5e3b81c1-865e-4bf7-bd05-b52c892dcf10)
-### Light mode
+### 🌞 Light mode
 ![image](https://github.com/user-attachments/assets/c8387651-5482-461f-b68b-1ebf76150f1c)
