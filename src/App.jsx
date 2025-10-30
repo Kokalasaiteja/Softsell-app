@@ -4,7 +4,7 @@ import './App.css';
 import { useTheme } from './theme-context';
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyAfx1btejKtGHduf0ObU8TOiwIsXS2MXHw" }); 
+const ai = new GoogleGenAI({ apiKey: "AIzaSyD494DPISQJBmIHq-OfV674RStgZeswy7w" }); 
 
 function App() {
   const { theme, toggleTheme } = useTheme();
