@@ -8,8 +8,8 @@ SoftSell is a responsive, modern web application that allows users to **resell u
 
 At  <br> <br>
 https://codesandbox.io/p/sandbox/github/Kokalasaiteja/Softsell-app or <br> <br>
-https://rgz6rx-5173.csb.app/
-
+[https://r51sjy-5173.csb.app/
+](https://r5lsjy-5173.csb.app/)
 ---
 
 ## ✨ Features
